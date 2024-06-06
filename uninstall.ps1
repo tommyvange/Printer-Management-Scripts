@@ -1,6 +1,6 @@
 ################################################################################
-# Project: tommyvange/printer-management-scripts
-# File: check.ps1
+# Repository: tommyvange/Printer-Management-Scripts
+# File: uninstall.ps1
 # Developer: Tommy Vange Rød
 # License: GPL 3.0 License
 #
@@ -23,7 +23,7 @@
 param (
     [string]$PortName,
     [string]$PrinterName,
-    [bool]$Logging = $false
+    [switch]$Logging
 )
 
 # Path to configuration file

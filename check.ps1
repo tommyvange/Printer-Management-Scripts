@@ -1,5 +1,5 @@
 ################################################################################
-# Project: tommyvange/printer-management-scripts
+# Repository: tommyvange/Printer-Management-Scripts
 # File: check.ps1
 # Developer: Tommy Vange Rød
 # License: GPL 3.0 License
@@ -22,7 +22,7 @@
 
 param (
     [string]$PrinterName,
-    [bool]$Logging = $false
+    [switch]$Logging
 )
 
 # Path to configuration file

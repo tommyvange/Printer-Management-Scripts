@@ -31,7 +31,7 @@ The install script adds a printer port and a printer using the specified paramet
 
 To run the install script, use the following command:
 ``` powershell
-.\install.ps1 -PrinterHostAddress "<PrinterHostAddress>" -PortName "<PortName>" -DriverName "<DriverName>" -PrinterName "<PrinterName>" [-Logging $true]
+.\install.ps1 -PrinterHostAddress "<PrinterHostAddress>" -PortName "<PortName>" -DriverName "<DriverName>" -PrinterName "<PrinterName>" [-Logging]
 ```
 
 ### Parameters
@@ -39,7 +39,7 @@ To run the install script, use the following command:
 -   `PortName`: The name of the printer port.
 -   `DriverName`: The name of the printer driver.
 -   `PrinterName`: The name of the printer.
--   [Optional] `Logging`: Enables transcript logging if set to `true`.
+-   [Optional] `Logging`: Enables transcript logging if set.
 
 ### Fallback to Configuration File
 
@@ -48,7 +48,7 @@ If a parameter is not provided via the command line, the script will attempt to 
 ### Example
 To specify values directly via the command:
 ``` powershell
-.\install.ps1 -PrinterHostAddress "111.22.33.555" -PortName "CUSTOM_PORT" -DriverName "Custom Driver" -PrinterName "Custom Printer" [-Logging $true]
+.\install.ps1 -PrinterHostAddress "111.22.33.555" -PortName "CUSTOM_PORT" -DriverName "Custom Driver" -PrinterName "Custom Printer" [-Logging]
 ```
 
 To use the default values from the configuration file:
@@ -74,14 +74,14 @@ The uninstall script removes a specified printer and its associated port. It che
 
 To run the uninstall script, use the following command:
 ``` powershell
-.\uninstall.ps1 -PortName "<PortName>" -PrinterName "<PrinterName>" [-Logging $true]
+.\uninstall.ps1 -PortName "<PortName>" -PrinterName "<PrinterName>" [-Logging]
 ``` 
 
 ### Parameters
 
 -`PortName`: The name of the printer port.
 -`PrinterName`: The name of the printer.
--[Optional] `Logging`: Enables transcript logging if set to `true`.
+-[Optional] `Logging`: Enables transcript logging if set.
 
 ### Fallback to Configuration File
 
@@ -90,7 +90,7 @@ If a parameter is not provided via the command line, the script will attempt to 
 ### Example
 To specify values directly via the command:
 ``` powershell
-.\uninstall.ps1 -PortName "CUSTOM_PORT" -PrinterName "Custom Printer" [-Logging $true]
+.\uninstall.ps1 -PortName "CUSTOM_PORT" -PrinterName "Custom Printer" [-Logging]
 ```
 
 To use the default values from the configuration file:
@@ -116,12 +116,12 @@ The check printer script verifies if a specified printer exists and outputs "Det
 
 To run the check printer script, use the following command:
 ``` powershell
-.\check.ps1 -PrinterName "<PrinterName>" [-Logging $true]
+.\check.ps1 -PrinterName "<PrinterName>" [-Logging]
 ```
 
 ### Parameters
 -   `PrinterName`: The name of the printer to check.
--   [Optional] `Logging`: Enables transcript logging if set to `true`.
+-   [Optional] `Logging`: Enables transcript logging if set.
 
 ### Fallback to Configuration File
 
@@ -157,7 +157,7 @@ When logging is enabled, the scripts will start a PowerShell transcript at the b
 
 ### Enabling Logging
 
-Logging can be enabled by setting the `-Logging` parameter to `true` when running the script, or by setting the `Logging` property to `true` in the `config.json` file.
+Logging can be enabled by setting the `-Logging` parameter when running the script, or by setting the `Logging` property to `true` in the `config.json` file.
 
 
 ### Log File Location
