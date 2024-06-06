@@ -1,11 +1,24 @@
-# Developed by:
-# ___________                           ___________.__          __________                        __   
-# \__    ___/___   _____   _____ ___.__.\__    ___/|  |__   ____\______   \ ____ _____    _______/  |_ 
-#   |    | /  _ \ /     \ /     <   |  |  |    |   |  |  \_/ __ \|    |  _// __ \\__  \  /  ___/\   __\
-#   |    |(  <_> )  Y Y  \  Y Y  \___  |  |    |   |   Y  \  ___/|    |   \  ___/ / __ \_\___ \  |  |  
-#   |____| \____/|__|_|  /__|_|  / ____|  |____|   |___|  /\___  >______  /\___  >____  /____  > |__|  
+################################################################################
+# Project: printer-management-scripts
+# File: uninstall.ps1
+# Developer: Tommy Vange Rød
+# License: GPL 3.0 License
 #
-# Version: 1.0
+# This file is part of [Your Project Name Here].
+#
+# [Your Project Name Here] is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0.html#license-text>.
+################################################################################
 
 param (
     [string]$PortName,
