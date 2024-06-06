@@ -4,7 +4,7 @@ These scripts are designed to install and uninstall network printers on Windows 
 
 This repository is licensed under the **[GNU General Public License v3.0 (GPLv3)](LICENSE)**.
 
-Developed by **TommyTheBeast**.
+Developed by **[Tommy Vange Rød](https://github.com/tommyvange)**.
 
 
 ## Configuration
