@@ -1,0 +1,7 @@
+{
+    "PrinterHostAddress": "111.22.33.444",
+    "PortName": "PRINT_COLOR",
+    "DriverName": "HP Universal Printing PCL 6",
+    "PrinterName": "PRINT (Color)",
+	"Logging": true
+}
