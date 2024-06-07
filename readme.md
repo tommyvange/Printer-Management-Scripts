@@ -133,6 +133,37 @@ The script includes a section designed for this purpose:
 
 To use this feature, simply uncomment these lines and populate the variables with your desired values. The script will prioritize these manual settings over CLI arguments and config.json, ensuring that the specified data is used during execution. This approach allows seamless integration with Intune and similar deployment tools.
 
+
+
+#### Detecting Printers via Registry (Intune)
+When deploying printer settings via Intune, it's often necessary to detect whether a specific printer is already installed on the target machines. This can be achieved by checking the registry for the presence of the printer. Here are the detailed steps and settings required to create a detection rule in Intune using the registry:
+
+##### Rule Type: Registry
+
+1.  **Rule Type**: Registry
+
+##### Key Path
+
+-   **Key Path**: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Printers\<PRINTER NAME>`
+    -   Replace `<PRINTER NAME>` with the actual name of the printer you want to detect.
+
+##### Value Name
+
+-   **Value Name**: `Name`
+
+##### Detection Method
+
+-   **Detection Method**: String comparison
+
+##### Operator
+
+-   **Operator**: Equals
+
+##### Value
+
+-   **Value**: `<PRINTER NAME>`
+    -   Replace `<PRINTER NAME>` with the actual name of the printer.
+
 ### Parameters
 -   `PrinterName`: The name of the printer to check.
 -   [Optional] `Logging`: Enables transcript logging if set.
