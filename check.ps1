@@ -25,6 +25,12 @@ param (
     [switch]$Logging
 )
 
+# Manually fill these variables if using environments like Intune 
+# (Intune does not support CLI arguments or configuration files for check scripts)
+#
+# $ManualPrinterName = "PRINT (Color)"
+# $ManualLogging = $false  # Set to $true to enable logging
+
 # Path to configuration file
 $configFilePath = "$PSScriptRoot\config.json"
 
@@ -35,6 +41,10 @@ $config = $null
 if (Test-Path $configFilePath) {
     $config = Get-Content -Path $configFilePath | ConvertFrom-Json
 }
+
+# Prioritize manually set variables
+if ($ManualPrinterName) { $PrinterName = $ManualPrinterName }
+if ($ManualLogging) { $Logging = $ManualLogging }
 
 # Use parameters from the command line or fall back to config file values
 if (-not $PrinterName) { $PrinterName = $config.PrinterName }
